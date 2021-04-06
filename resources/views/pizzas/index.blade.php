@@ -10,8 +10,8 @@
             Pizza List
         </div>
 
-        <p>{{ $name }}</p>
-        <p>{{ $age }}</p>
+        {{-- <p>{{ $name }}</p>
+        <p>{{ $age }}</p> --}}
         {{-- <p>{{ $type }} - {{ $base }} - {{ $price }}</p> --}}
 
             {{-- If statement sanple --}}
@@ -31,8 +31,7 @@
 
         {{-- Php statement sanple --}}
         {{-- @php
-            $name = 'Scofield';
-            echo($name)
+
         @endphp --}}
 
             {{-- for statement sample --}}
@@ -46,13 +45,7 @@
 
         @foreach ($pizzas as $pizza)
         <div>
-            {{ $loop-> index }} {{ $pizza['type'] }} - {{ $pizza['base'] }}
-            @if($loop->first)
-                <span> - first in the loop</span>
-            @endif
-            @if($loop->last)
-                <span> - last in the loop</span>
-            @endif
+            {{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }}
         </div>
 
         @endforeach
