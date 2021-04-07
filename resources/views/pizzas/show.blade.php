@@ -2,14 +2,16 @@
 
 
 @section('content')
-
-<div class="flex-center position-ref full-height">
-
-    <div class="content">
-        <div class="title m-b-md">
-            Pizza List - {{ $id }}
-        </div>
-
-    </div>
+<div class="wrapper pizza-details">
+    <h1> Order for {{ $pizza->name }}</h1>
+    <p class="type">Type - {{ $pizza->type }}</p>
+    <p class="base">Base - {{ $pizza->base }}</p>
+    <p class="toppings">Extra Toppings</p>
+    <ul>
+        @foreach ($pizza->toppings as $topping)
+            <li>{{ $topping }}</li>
+        @endforeach
+    </ul>
 </div>
+<a href="/pizzas" class="back">back to all pizza</a>
 @endsection
