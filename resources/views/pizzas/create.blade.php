@@ -15,6 +15,7 @@
             <option value="veg supreme">Veg Supreme</option>
             <option value="volcano">Volcano</option>
         </select>
+        <label for="type">Choose Base type:</label>
         <select name="base" id="base">
             <option value="chessy crust">Chessy Crust</option>
             <option value="garlic crust">Galic Crust</option>
